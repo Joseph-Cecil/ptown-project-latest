@@ -6,14 +6,14 @@ const userSchema = new mongoose.Schema({
         required: true,
     },
     email: {
-        type: String,
+        type: String,  
         required: true
     },
     name: {
         type: String
     },
-    addressLine1: {
-        type: String
+    phoneNumber: {
+        type: Number
     },
     areaName: {
         type: String
@@ -21,7 +21,7 @@ const userSchema = new mongoose.Schema({
     streetName: {
         type: String
     },
-    HouseNumber : {
+    houseNumber : {
         type: String
     }
 
