@@ -30,5 +30,9 @@ export const validateMyRestaurantRequest = [
   body("areaName").isString().notEmpty().withMessage("Area Name is Required"),
   body("location").isString().notEmpty().withMessage("Exact Location of your Shop is required"),
   body("estimateDeliveryTime"),
-  body("cuisines").notEmpty().withMessage("Type of Items is required"),  
+  body("cuisines").isArray().withMessage("Cuisines must be an array").not().isEmpty().withMessage("Cuisines Array cannot be empty"),
+  body("menuItems").isArray().withMessage("Menu items must be an array"),
+  body("menuItems.*.name").notEmpty().withMessage("Menu item name is required"),
+  body("menuItems.*.price").isFloat({min: 0}).withMessage("Menu Item Pice is required and must be a positive number"),
+  handleValidationErrors,
 ];
