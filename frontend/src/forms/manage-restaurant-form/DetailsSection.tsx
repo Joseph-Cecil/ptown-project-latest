@@ -12,7 +12,7 @@ const DetailsSection = () => {
                     Enter Details About Your Shop
                 </FormDescription>
             </div>
-            <FormField control={control} name="restuarantName" render={({field}) => (<FormItem>
+            <FormField control={control} name="restaurantName" render={({field}) => (<FormItem>
                 <FormLabel>Shop Name</FormLabel>
                 <FormControl>
                     <Input {...field} className="bg-white"/>
