@@ -7,13 +7,13 @@ const getMyRestaurant = async (req: Request, res: Response) => {
     try {
         const restaurant = await Restaurant.findOne({user: req.userId});
         if(!restaurant) {
-            return res.status(404).json({message: "restaurant not found"});
+            return res.status(404).json({message: "Shop not found"});
         }
 
         res.json(restaurant)
     } catch (error) {
         console.log("error", error);
-        res.status(500).json({message: "Error fetching restuarant"})
+        res.status(500).json({message: "Error fetching Shop"})
     }
 }
 
@@ -22,7 +22,7 @@ const createMyRestaurant = async (req: Request, res: Response) => {
         const existingRestaurant = await Restaurant.findOne({user: req.userId});
 
         if (existingRestaurant) {
-            return res.status(409).json({message: "User Restaurant already exists"})
+            return res.status(409).json({message: "User Shop already exists"})
         }
 
         const image = req.file as Express.Multer.File;
