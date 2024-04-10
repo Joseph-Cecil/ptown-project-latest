@@ -36,7 +36,7 @@ export const useGetMyRestaurant = () => {
 export const useCreateMyRestaurant = () => {
     const {getAccessTokenSilently} = useAuth0();
 
-    const createMyRestuarantRequest = async(restaurantFormData: FormData): Promise<Restaurant> => {
+    const createMyRestuarantRequest = async(restaurantFormData: FormData): Promise<Restaurant> => {      
         const accessToken = await getAccessTokenSilently();
 
         const response = await fetch(`${API_BASE_URL}/api/my/restaurant`, {
@@ -46,6 +46,7 @@ export const useCreateMyRestaurant = () => {
             },
             body: restaurantFormData,
         });
+        
         if(!response.ok) {
             throw new Error("Failed to create shop")
         }
@@ -66,11 +67,11 @@ export const useCreateMyRestaurant = () => {
     return {createRestaurant, isLoading}
 }
 
-export const useUpdateRestaurant = () => {
+export const useUpdateMyRestaurant = () => {
     const {getAccessTokenSilently} = useAuth0();
 
     const updateRestaurantRequest = async (restaurantFormData: FormData): Promise<Restaurant> => {
-        const accessToken = getAccessTokenSilently();
+        const accessToken = await getAccessTokenSilently();
 
         const response = await fetch(`${API_BASE_URL}/api/my/restaurant`, {
             method: "PUT",
@@ -87,7 +88,7 @@ export const useUpdateRestaurant = () => {
         return response.json();
     }
 
-    const {mutate: updateRestaurant, isLoading, error, isSuccess} = useMutation(updateRestaurantRequest);
+    const {mutate: updateMyRestaurant, isLoading, error, isSuccess} = useMutation(updateRestaurantRequest);
 
     if(isSuccess){
         toast.success("Shop Updated");
@@ -97,5 +98,5 @@ export const useUpdateRestaurant = () => {
         toast.error("Unable to update Shop");
     } 
 
-    return {updateRestaurant, isLoading}
+    return {updateMyRestaurant, isLoading}
 }
