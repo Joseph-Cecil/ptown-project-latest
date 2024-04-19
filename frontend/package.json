@@ -32,7 +32,16 @@
     "sonner": "^1.4.3",
     "tailwind-merge": "^2.2.1",
     "tailwindcss-animate": "^1.0.7",
-    "zod": "^3.22.4"
+    "zod": "^3.22.4",
+    "@react-three/drei": "^9.78.2",
+    "@react-three/fiber": "^8.13.7",
+    "@react-three/postprocessing": "^2.14.13",
+    "@types/three": "^0.155.0",
+    "meshline": "^3.1.6",
+    "prism-react-renderer": "^2.0.6",
+    "prismjs": "^1.29.0",
+    "three": "^0.154.0",
+    "zustand": "^4.3.9"
   },
   "devDependencies": {
     "@types/node": "^20.11.19",

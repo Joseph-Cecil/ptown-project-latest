@@ -5,6 +5,7 @@ import AuthCallbackPage from "./pages/AuthCallbackPage";
 import UserProfilePage from "./pages/UserProfilePage";
 import ProtectedRoute from "./auth/ProtectedRoute";
 import ManageRestaurantPage from "./pages/ManageRestuarantPage";
+import StaticDelivery from "./pages/StaticDelivery";
 
 const AppRoutes = () => {
   return (
@@ -37,6 +38,8 @@ const AppRoutes = () => {
           }
         />
       </Route>
+
+      <Route path="/make-request" element={<StaticDelivery/>} />
       
 
       <Route path="*" element={<Navigate to="/" />} />
