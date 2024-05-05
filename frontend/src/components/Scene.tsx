@@ -73,10 +73,12 @@ function Effects() {
 
 export default function Scene() {
   return (
+    <div style={{backgroundColor:'black', height:'100%', overflow:'hidden'}}>
     <Canvas>
       <Experience />
       <Effects />
     </Canvas>
+    </div>
   )
 }
 

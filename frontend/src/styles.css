@@ -10,13 +10,9 @@ body,
   margin: 0;
   padding: 0;
   -webkit-touch-callout: none;
-  overflow: hidden;
-  background: #010101;
 }
 
-#root {
-  overflow: hidden;
-}
+
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial,
@@ -49,43 +45,6 @@ body {
   margin-bottom: -60px;
 }
 
-.counter {
-  position: absolute;
-  top: -100px;
-  right: -20px;
-  color: white;
-  background: #394a52;
-  padding: 40px;
-  border-radius: 10px;
-  box-shadow: 0 16px 40px -5px rgba(0, 0, 0, 0.5);
-  width: 120px;
-  height: 120px;
-  font-size: 3em;
-}
-
-.counter > span {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  margin-top: -15px;
-  transform: translate3d(-50%, -50%, 0);
-}
-
-.counter > button {
-  margin: 10px;
-  padding: 5px 10px;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100px;
-  border-radius: 5px;
-  border: solid 2px white;
-  outline: none;
-  background: transparent;
-  color: white;
-  cursor: pointer;
-}
-
 .code-container pre[class*='language-'] {
   margin-top: -50px;
   display: inline-block;
@@ -109,16 +68,7 @@ span.header-left {
   line-height: 1em;
 }
 
-a {
-  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial,
-    sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  color: inherit;
-  position: absolute;
-  display: inline;
-  text-decoration: none;
-}
+
 
 .nav {
   align-items: center;

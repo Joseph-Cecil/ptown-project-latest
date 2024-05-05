@@ -1,4 +1,4 @@
-import CodePreview from '@/components/CodePreview';
+import CodePreview from "@/components/CodePreview";
 import Details from '@/components/Details';
 import Scene from '@/components/Scene';
 
